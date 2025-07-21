@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Urbanist", sans-serif;
+}
+
+:root {
+  --primary: #141414;
+  --secondary: #191919;
+  --white: #ffff;
+  --btn-bg: #703bf7;
+  --bordre: #262626;
+  --hero-content-p: #999999;
+
+  /* Font Sizes */
+  --fs-small: 0.875rem; /* 14px */
+  --fs-base: 1rem; /* 16px */
+  --fs-medium: 1.25rem; /* 20px */
+  --fs-large: 1.5rem; /* 24px */
+  --fs-xl: 2rem; /* 32px */
+  --fs-xxl: 5rem; /* 80px */
+
+  /* Spacing */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 1rem; /* 16px */
+  --space-md: 1.5rem; /* 24px */
+  --space-lg: 2rem; /* 32px */
+  --space-xl: 3rem; /* 48px */
+}
+
+/*  ! shared btn */
+.main-btn {
+  padding: 0.75rem 1.25rem;
+  background-color: var(--btn-bg);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--white);
+  font-weight: 500;
+}
+
+#max-width {
+  width: 1920px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+header {
+  width: 100%;
+  height: 50.125rem;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+nav {
+  width: 100%;
+  padding: 0.875rem 5rem;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .menu-bar ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav .menu-bar li {
+  border: 0.2rem solid var(--secondary);
+  padding: 0.75rem 1.25rem;
+  color: var(--white);
+  text-transform: capitalize;
+  font-size: 14px;
+  font-family: "Urbanist", sans-serif;
+  transition: 0.4s;
+  font-weight: 500;
+
+  &:hover {
+    border: 0.2rem solid var(--bordre);
+    border-radius: 0.5rem;
+    background-color: var(--primary);
+  }
+}
+
+.nav-btn {
+  padding: 0.75rem 1.25rem;
+  border: 0.2rem solid var(--bordre);
+  background-color: var(--secondary);
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+nav .mobile-nav-bar {
+  display: none;
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+/* ? hero conteiner style */
+
+.hero-container {
+  width: 100%;
+  height: 38.875rem;
+  padding: 0 0 0 5rem;
+  gap: 4rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  color: var(--white);
+  font-weight: normal;
+  line-height: 4rem;
+  margin-bottom: 1.25rem;
+}
+
+.hero-content p {
+  line-height: 150%;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--hero-content-p);
+}
+
+.review {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  gap: 1.125rem;
+}
+
+.review-child {
+  border: 0.2rem solid var(--bordre);
+  border-radius: 0.5rem;
+  background-color: var(--secondary);
+  padding: 0.875rem 1.25rem;
+}
+
+.review-child h2 {
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: 0.2rem;
+}
+.hero-contant-hero-btn {
+  padding: 0.75rem 1.25rem;
+  background: transparent;
+  border: 0.2rem solid var(--bordre);
+  border-radius: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  min-width: 156px;
+}
+.hero-banner {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/Container.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.second-container-img {
+  position: absolute;
+  top: 5.938rem;
+  right: 33.125rem;
+  animation: rotating 20s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.hero-content-btn {
+  display: flex;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+/*  !dream house style */
+
+.dream-house {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.6rem;
+  background-color: var(--primary);
+  border: 0.2rem solid var(--bordre);
+}
+
+.dream-home,
+.unlock-property-value,
+.effortless-property-management,
+.effortless-Property-management {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background-color: var(--secondary);
+  border-radius: 0.6rem;
+  border: var(--bordre);
+  margin: 0.5rem;
+}
+
+.dream-home h2,
+.unlock-property-value h2,
+.effortless-property-management h2,
+.effortless-Property-management h2 {
+  font-size: 1rem;
+  color: var(--white);
+}
+/* ! .....responsive design  by media query .....*/
+
+@media screen and (max-width: 576px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header {
+    height: auto;
+    max-width: 5766px;
+    width: 100%;
+  }
+  #max-width {
+    max-width: 576px;
+    width: 100%;
+    margin: auto 0;
+  }
+
+  .menu-bar,
+  .nav-btn {
+    display: none;
+  }
+  .mobile-nav-bar {
+    display: block;
+  }
+  .nav-bar {
+    padding: 1.5rem 2rem;
+  }
+
+  .hero-content {
+    max-width: 576px;
+    padding: 0 5%;
+  }
+
+  .hero-banner {
+    display: none;
+  }
+
+  .dream-house {
+    max-width: 576px;
+  }
+
+  .hero-container {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0 5% 0 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+    margin-top: 5rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.225rem;
+    text-align: center;
+  }
+  .hero-content-btn {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content-btn > * {
+    width: fit-content;
+  }
+  .review {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 3rem;
+  }
+  .item-3 {
+    grid-column: 1 /-1;
+  }
+
+  .review > * {
+    text-align: center;
+  }
+
+  .dream-house {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 1rem;
+    padding: 0.5rem;
+  }
+
+  #nav-bar-btn {
+    display: block;
+  }
+  .dream-house > * {
+    text-align: center;
+    margin: 0;
+  }
+}
